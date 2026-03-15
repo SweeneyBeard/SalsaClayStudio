@@ -37,6 +37,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -94,11 +95,15 @@ a {
 
 .hero__logo-wrap {
   justify-self: center;
-  width: min(72vw, 16rem);
+  width: clamp(10rem, 52vw, 13.75rem);
+  max-width: 100%;
 }
 
 .hero__logo {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .hero__content {
@@ -335,7 +340,7 @@ main {
   }
 
   .hero__logo-wrap {
-    width: 100%;
+    width: min(100%, 17rem);
   }
 
   .hero__actions {
