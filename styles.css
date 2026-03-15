@@ -93,17 +93,29 @@ a {
   background: rgba(224, 124, 24, 0.08);
 }
 
+.site-logo-wrap {
+  width: min(52vw, 220px);
+  max-width: 220px;
+  margin: 0 auto 1rem;
+}
+
 .hero__logo-wrap {
   justify-self: center;
-  width: clamp(10rem, 52vw, 13.75rem);
-  max-width: 100%;
+  align-self: start;
+  min-height: 0;
+  max-height: none;
 }
 
 .hero__logo {
+  display: block;
   width: 100%;
+  max-width: 220px;
   height: auto;
+  max-height: none;
   border-radius: 50%;
   object-fit: contain;
+  aspect-ratio: auto;
+  transform: none;
 }
 
 .hero__content {
@@ -340,7 +352,7 @@ main {
   }
 
   .hero__logo-wrap {
-    width: min(100%, 17rem);
+    margin-bottom: 0;
   }
 
   .hero__actions {
