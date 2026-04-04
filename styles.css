@@ -100,6 +100,8 @@ a {
 }
 
 .hero__logo-wrap {
+  display: grid;
+  gap: 1rem;
   justify-self: center;
   align-self: start;
   min-height: 0;
@@ -116,6 +118,12 @@ a {
   object-fit: contain;
   aspect-ratio: auto;
   transform: none;
+}
+
+.hero__logo--secondary {
+  border-radius: 1.5rem;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .hero__content {
@@ -231,28 +239,6 @@ h3 {
   color: var(--color-accent);
 }
 
-.button--placeholder {
-  justify-content: space-between;
-  min-width: min(100%, 13rem);
-}
-
-.button__badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.45rem;
-  padding: 0.1rem 0.55rem;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.16);
-  font-size: 0.74rem;
-  letter-spacing: 0.03em;
-}
-
-.placeholder-note {
-  margin: 0.9rem 0 0;
-  color: var(--color-text-soft);
-  font-size: 0.92rem;
-}
-
 main {
   margin-top: 1.25rem;
 }
@@ -334,7 +320,7 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .button--placeholder {
+  .hero__actions > .button--primary {
     grid-column: 1 / -1;
   }
 }
